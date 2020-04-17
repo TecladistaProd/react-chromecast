@@ -12,6 +12,11 @@
     "build-storybook": "build-storybook",
     "test": "jest"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "."
@@ -35,7 +40,7 @@
     "@types/react-helmet": "^5.0.15",
     "babel-loader": "^8.1.0",
     "commitizen": "^4.0.4",
-    "cz-conventional-changelog": "^3.1.0",
+    "cz-conventional-changelog": "3.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-config-prettier": "^6.10.1",
@@ -49,5 +54,10 @@
   },
   "dependencies": {
     "react-helmet": "^6.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
