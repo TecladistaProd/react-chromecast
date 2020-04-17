@@ -1,0 +1,16 @@
+#paths to npm ignore
+
+/.storybook
+/.git
+/.gitignore
+/stories
+/node_modules
+/storybook-static
+
+
+# files to npm ignore
+
+prettier.config.js
+.eslintrc.json
+yarn.lock
+tsconfig.json
