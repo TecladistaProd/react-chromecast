@@ -6,7 +6,9 @@
 /stories
 /node_modules
 /storybook-static
-
+/.rts2*
+/.cache
+/src
 
 # files to npm ignore
 
@@ -14,3 +16,4 @@ prettier.config.js
 .eslintrc.json
 yarn.lock
 tsconfig.json
+yarn-error.log

@@ -1,21 +1,23 @@
-import React, { useState, useEffect } from "react";
+import * as React from 'react';
 
-import { Helmet } from "react-helmet";
-import castContext from "../context/castContext";
+import { Helmet } from 'react-helmet';
+import castContext from '../context/castContext';
 
-import CastReceiver from "../interfaces/CastReceiver";
+import CastReceiver from '../interfaces/CastReceiver';
+
+const { useState, useEffect } = React;
 
 /**
- * CastProvider is a component to use arround every component you go use with `react-cast` hooks
+ * CastProvider is a component to use arround every component you go use with `react-chromecast` hooks
  *
  * Ex:
  * ```jsx
- *  import CastProvider from 'react-cast'
+ *  import CastProvider from 'react-chromecast'
  *  function App () {
  *    return (
  *      <CastProvider>
  *        {
- *          // your components using react-cast hooks goes here
+ *          // your components using react-chromecast hooks goes here
  *        }
  *      </CastProvider>
  *    )

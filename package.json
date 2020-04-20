@@ -1,12 +1,22 @@
 {
-  "name": "react-cast",
-  "version": "0.0.1",
+  "name": "react-chromecast",
+  "version": "0.0.2-alpha",
   "description": "A abstraction of cast lib to react.js",
+  "source": "src/index.ts",
   "main": "dist/index.js",
+  "umd:main": "dist/react-chromecast.umd.production.js",
+  "module": "dist/react-chromecast.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "storybook": "start-storybook -p 8080",
-    "build": "tsc -p .",
-    "commit": "git add * && git-cz",
+    "watch": "microbundle watch -o dist/ --tsconfig ./tsconfig.json --sourcemap false --no-compress",
+    "prebuild": "sucrase-node scripts/prebuild.ts",
+    "build": "cross-env NODE_ENV=production tsdx build --format=cjs,esm,umd",
+    "postbuild": "sucrase-node scripts/postbuild.ts",
+    "commit": "git add . && git-cz",
     "deploy": "yarn commit",
     "postdeploy": "git push origin master",
     "build-storybook": "build-storybook",
@@ -19,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "."
+    "url": "https://github.com/tecladistaprod/react-chromecast"
   },
   "keywords": [
     "TypeScript",
@@ -30,6 +40,9 @@
   "author": "TecladistaProd",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@storybook/addon-centered": "^5.3.18",
@@ -38,8 +51,11 @@
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
     "@types/react-helmet": "^5.0.15",
+    "acorn": "^7.1.1",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.1.0",
     "commitizen": "^4.0.4",
+    "cross-env": "^7.0.2",
     "cz-conventional-changelog": "3.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
@@ -49,8 +65,15 @@
     "prettier": "^2.0.4",
     "react": "^16.13.1",
     "react-docgen-typescript-loader": "^3.7.2",
+    "react-dom": "^16.13.1",
+    "sucrase": "^3.13.0",
     "ts-loader": "^7.0.0",
+    "tsdx": "^0.13.2",
     "typescript": "^3.8.3"
+  },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
   },
   "dependencies": {
     "react-helmet": "^6.0.0"
