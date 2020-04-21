@@ -1,6 +1,6 @@
 {
   "name": "react-chromecast",
-  "version": "0.0.2-alpha",
+  "version": "0.0.5-alpha",
   "description": "A abstraction of cast lib to react.js",
   "source": "src/index.ts",
   "main": "dist/index.js",
