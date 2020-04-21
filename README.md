@@ -111,3 +111,10 @@ useMedia will return an object with `playMedia`, `addMedia`, `play`, `pause`, `i
 
 > media url should be an url accessible to chromecast like an external url eg: `"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"`, or an internal server accessible in the same network.
 > actually you need to use playMedia before use other functions like (addMedia).
+
+## Help this Project
+****
+
+You can **help** this project supporting us in the button below.
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HHWEKX97SKYAQ)

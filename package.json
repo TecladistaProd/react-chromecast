@@ -12,7 +12,6 @@
   ],
   "scripts": {
     "storybook": "start-storybook -p 8080",
-    "watch": "microbundle watch -o dist/ --tsconfig ./tsconfig.json --sourcemap false --no-compress",
     "prebuild": "sucrase-node scripts/prebuild.ts",
     "build": "cross-env NODE_ENV=production tsdx build --format=cjs,esm,umd",
     "postbuild": "sucrase-node scripts/postbuild.ts",
