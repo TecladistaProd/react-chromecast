@@ -1,3 +1,5 @@
+![React-Chromecast Icon](https://raw.githubusercontent.com/gist/TecladistaProd/8594d63e85854f35432d3262365aea6b/raw/c280e16d8ae4c4443b99a1b7facc3600b7ffdcdb/react-chromecast.svg)
+
 # react-chromecast
 
 **react-chromecast** is abstraction to cast_sender and cast_receiver (chromecast libs) of google.
